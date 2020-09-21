@@ -1,7 +1,7 @@
 package main
 
 import (
-	"awesomeProject/models"
+	"crie/models"
 	"fmt"
 	"reflect"
 	"runtime"
