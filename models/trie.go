@@ -4,7 +4,7 @@ type Trie struct {
 	Root *TrieNode
 }
 
-func NewTrie() *Trie {
+func NewCompressedTrie() *Trie {
 	return &Trie{NewTrieNode("", false)}
 }
 
