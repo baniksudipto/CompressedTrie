@@ -20,13 +20,13 @@ func (n *TrieNode) SplitNode(offset int) *TrieNode {
 		n.Word = n.Word[0:offset]
 		newNode := NewTrieNode(afterOffset, n.IsWord)
 		n.IsWord = false
-		n.ModeChildrenTo(newNode)
+		n.MoveChildrenTo(newNode)
 		n.Children[afterOffset[0]] = newNode // add link to newly created node
 	}
 	return n
 }
 
-func (n *TrieNode) ModeChildrenTo(dest *TrieNode) {
+func (n *TrieNode) MoveChildrenTo(dest *TrieNode) {
 	for k, v := range n.Children {
 		dest.Children[k] = v
 		delete(n.Children, k)
